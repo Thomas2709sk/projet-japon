@@ -2,6 +2,6 @@ Projet de site pour voyage au Japon
 
 
 10/01/2025
-<br>Right now you have the main page</br>
+Right now you have the main page
 On the navbar you can go to "Régions" > "Toute les régions"(all region) and Kansai
-You also have "Connexion"(signin) and "Inscription"(signup)
+You also have "Connexion"(signin) and "Inscription"(signup) <hr>
