@@ -8927,9 +8927,9 @@ a {
   padding: 2rem;
   background-image: url("../assets/img/bigtitle.jpg");
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.3333333333);
-  background-blend-mode: darken;
+  background: linear-gradient(rgba(0, 0, 0, 0.2));
   background-position: bottom;
+  text-shadow: 2px 2px 8px black;
 }
 
 .hero_regions {
@@ -8938,9 +8938,9 @@ a {
   padding: 2rem;
   background-image: url("../assets/img/lregions.jpg");
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.3333333333);
-  background-blend-mode: darken;
+  background: linear-gradient(rgba(0, 0, 0, 0.2));
   background-position: bottom;
+  text-shadow: 2px 2px 8px black;
 }
 
 .hero_kansai {
@@ -8949,9 +8949,9 @@ a {
   padding: 2rem;
   background-image: url("../assets/img/kansai4.jpg");
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.3333333333);
-  background-blend-mode: darken;
+  background: linear-gradient(rgba(0, 0, 0, 0.2));
   background-position: bottom;
+  text-shadow: 2px 2px 8px black;
   background-position: top;
 }
 
@@ -8983,7 +8983,7 @@ a {
 }
 
 .card-photo {
-  filter: brightness(0.8);
+  filter: brightness(0.9);
 }
 
 .card-title {
