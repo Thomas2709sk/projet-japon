@@ -1,0 +1,19 @@
+@use "../mixins" as mixins;
+
+.hero_title{
+    text-shadow: 2px 2px 8px black;
+}
+
+.hero{
+    @include mixins.bigtitle($url: '../assets/img/bigtitle.jpg');
+}
+
+.hero_regions{
+    @include mixins.bigtitle($url: '../assets/img/lregions.jpg');
+}
+
+.hero_kansai{
+    @include mixins.bigtitle($url: '../assets/img/kansai4.jpg');
+    background-position: top;
+    
+}

@@ -1,0 +1,11 @@
+@mixin bigtitle($url){
+    width: 100%;
+    height: 36rem;
+    padding: 2rem;
+    background-image: url($url);
+    background-size: cover;
+    background-color: #0005;
+    background-blend-mode: darken;
+    background-position: bottom;
+    
+}

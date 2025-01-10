@@ -1,0 +1,51 @@
+// Variables
+@import "variables.scss";
+
+// Configuration Bootstrap
+@import "../assets/bootstrap/scss/functions";
+@import "../assets/bootstrap/scss/variables";
+@import "../assets/bootstrap/scss/variables-dark";
+@import "../assets/bootstrap/scss/maps";
+@import "../assets/bootstrap/scss/mixins";
+@import "../assets/bootstrap/scss/utilities";
+
+// Layout & composants Bootstrap
+@import "../assets/bootstrap/scss/root";
+@import "../assets/bootstrap/scss/reboot";
+@import "../assets/bootstrap/scss/type";
+@import "../assets/bootstrap/scss/images";
+@import "../assets/bootstrap/scss/containers";
+@import "../assets/bootstrap/scss/grid";
+@import "../assets/bootstrap/scss/tables";
+@import "../assets/bootstrap/scss/forms";
+@import "../assets/bootstrap/scss/buttons";
+@import "../assets/bootstrap/scss/nav";
+@import "../assets/bootstrap/scss/navbar";
+@import "../assets/bootstrap/scss/card";
+@import "../assets/bootstrap/scss/alert";
+
+// Utilities
+@import "../assets/bootstrap/scss/utilities/api";
+
+// Base
+@import "./base/reset";
+
+// Mixins personnalisés
+@import "mixins";
+
+// Styles personnalisés
+@import "custom-styles";
+
+// Pages
+
+
+// Layout
+@import "./layout/flux";
+
+// components
+@import "./components/hero";
+@import "./components/butn";
+@import "./components/search";
+@import "./components/card";
+@import "./components/fieldset";
+

@@ -1,0 +1,58 @@
+.card-photo{
+    filter: brightness(0.8);
+}
+.card-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 8px black;
+}
+
+.box {
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 500ms ease-out;
+    will-change: transform; 
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.grid:hover .box {
+    filter: blur(5px);
+}
+  
+.grid .box:hover {
+    filter: blur(0);
+}
+
+
+@media (max-width: 768px) {
+       
+    .box{
+        filter: none;
+    }
+    .box:hover{
+        transform: none;
+        
+        
+    }
+    .grid:hover .box {
+        filter: none;
+    }
+}
+
+.flag{
+    width: 10rem;
+}
+
+.carousel{
+    max-width: 60rem;
+    max-height: auto;
+}
+
+.carousel-caption{
+    background-color: rgba(0, 0, 0, 0.6);
+}
