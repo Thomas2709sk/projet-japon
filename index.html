@@ -62,20 +62,22 @@
         <section class="hero text-center d-flex flex-column justify-content-center container-fluid">
             <h1 class="text-white hero_title text-center">Partez à la découverte du Japon</h1>
             <form class="hero_search d-flex justify-content-center" action="" method="get">
-              <div clas="text-center d-block align-items-center">
-                <label class="hero_label pt-2 fs-5 fst-italic text-white d-flex justify-content-center" for="my-city">Où souhaitez-vous aller ?</label>
-                <input class="hero_input fs-5 text-center justify-content-center"
-                  id="my-city"
-                  type="text"
-                  name="city"
-                  value=""
-                  placeholder="Région, préfecture, ville..."
-                />
-                <div class="text-center pt-2">
-                  <button type="submit" class="butn bg-danger text-light"> Rechercher</button>
+              <div class=" d-flex justify-content-center align-items-center">
+                <div class="position-relative">
+                  <label class="hero_label pt-2 fs-5 fst-italic text-white d-flex justify-content-center" for="my-city">Où souhaitez-vous aller ?</label>
+                    <input type="text"
+                          name="city"
+                           class=" hero_input fs-5 rounded-pill search-bar pe-5"
+                           placeholder="Région, préfecture, ville..."
+                           aria-label="Search">
+                    <button class="btn  rounded-end-pill position-absolute me-1 top-50 end-0 translate-middle-" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search text-white" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </button>  
                 </div>
-              </div>
-            </form>
+            </div>
+          </form>
           </section>
 
         <section class="p-5 features-icons bg-secondary text-center">
