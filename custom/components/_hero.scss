@@ -13,7 +13,7 @@
 }
 
 .hero_kansai{
-    @include mixins.bigtitle($url: '../assets/img/kansai4.jpg');
+    @include mixins.bigtitle($url: '../assets/img/Kansai/kansai4.jpg');
     background-position: top;
     
 }
