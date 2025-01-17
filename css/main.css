@@ -9025,6 +9025,8 @@ a {
 }
 .flag {
   width: 10rem;
+  height: auto;
+  justify-self: left;
 }
 
 .carousel {
@@ -9034,6 +9036,10 @@ a {
 
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.img-pref {
+  width: 10rem;
 }
 
 .field {
