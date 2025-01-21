@@ -1,3 +1,4 @@
+// SCRIPT JAPAN TIME
 let time = document.getElementById('time');
 setInterval(() => {
     let d = new Date();

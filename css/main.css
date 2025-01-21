@@ -8903,11 +8903,11 @@ a {
   text-decoration: none;
 }
 
-.logo {
+.card-title {
   font-family: "Mclaren", sans-serif;
 }
 
-.card-title {
+.logo-title {
   font-family: "Mclaren", sans-serif;
 }
 
@@ -8917,7 +8917,7 @@ a {
   margin-right: auto;
 }
 
-.hero_title {
+.hero_title, .logo-title {
   text-shadow: 2px 2px 8px black;
 }
 
@@ -8980,6 +8980,10 @@ a {
 .hero_input::placeholder {
   color: white;
   opacity: 1;
+}
+
+.logo-hero {
+  width: 8rem;
 }
 
 .card-photo {

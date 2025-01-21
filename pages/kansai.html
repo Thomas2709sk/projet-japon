@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <title>Kansai</title>
 </head>
 <body>
+  <!-- START HEADER -->
     <header>
+      <!-- FIRST NAV - LOGO + UL -->
         <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container-fluid">
             <a class="navbar-brand text-light" href="#">Découverte du Japon</a>
@@ -19,7 +21,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" href="index.html">Accueil</a>
+                    <a class="nav-link active text-light" aria-current="page" href="../index.html">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="#">Carte</a>
@@ -32,11 +34,11 @@
                     Régions
                     </a>
                     <ul class="dropdown-menu bg-primary ">
-                    <li><a class="dropdown-item bg-primary" href="regions.html">Toutes les régions</a></li>
+                    <li><a class="dropdown-item bg-primary" href="/pages/regions.html">Toutes les régions</a></li>
                     <li><a class="dropdown-item text-light" href="#">Hokkaido</a></li>
                     <li><a class="dropdown-item text-light" href="#">Tohoku</a></li>
                     <li><a class="dropdown-item text-light" href="#">Kanto</a></li>
-                    <li><a class="dropdown-item text-light" href="kansai.html">Kansai</a></li>
+                    <li><a class="dropdown-item text-light" href="/pages/kansai.html">Kansai</a></li>
                     <li><a class="dropdown-item text-light" href="#">Chubu</a></li>
                     <li><a class="dropdown-item text-light" href="#">Chugoku</a></li>
                     <li><a class="dropdown-item text-light" href="#">Shikoku</a></li>
@@ -55,10 +57,15 @@
             </div>
         </nav>
 </header>
+<!-- END HEADER -->
+ <!-- START MAIN -->
 <main>
+  <!-- START HERO - H1 + _hero -->
     <section class="hero_kansai text-center d-flex flex-column justify-content-center container-fluid">
         <h1 class="text-white hero_title text-center">Kansai</h1>
     </section>
+    <!-- END HERO -->
+     <!-- TITLE + RESUME -->
     <div>
         <p class="text-center text-primary pt-4 pb-2 fs-3 fw-bold">Berceau de nombreuses traditions culturelles</p>
     </div>
@@ -66,8 +73,8 @@
     <div class="container flux text-center pt-5">
         <p class="fs-5 fw-bold">Le Kansai (関西) est une région située dans le sud-ouest du Japon, alliant patrimoine historique et culture traditionnelle avec une forte influence économique. C’est une destination idéale pour découvrir l'histoire du Japon tout en profitant de la modernité de ses grandes villes.</p>
     </div>
-      
-      <!-- Fieldset -->
+      <!--  -->
+      <!-- SUMMARY + MAP -->
       <div class="row container flux justify-content-between d-flex align-items-start pt-5">
         <fieldset class="field border col-lg-6 col-md-6 border-3 border-primary rounded-3 mb-3">
           <legend class="float-none w-auto px-3">Sommaire</legend>
@@ -83,80 +90,90 @@
             <li><a href="#galerie" class="text-danger fw-bold">Galerie</a></li>
           </ul>
         </fieldset>
+        <!-- MAP -->
         <div class="col-12 col-md-6 col-lg-6">
           <h2 class="text-center pb-3">Où se situe le Kansai ?</h2>
-          <img src="assets/img/Kansai/mapjapankansai.png" class="map img-fluid" alt="Carte du Kansai">
+          <img src="../assets/img/Kansai/mapjapankansai.png" class="map img-fluid" alt="Carte du Kansai">
         </div>
       </div>
-
-      <article id="mie" class="container flux pt-5">
-        <img src="assets/img/flag/flagmie.png" class="flag img-fluid" alt="dpaeau préfecture de Hyogo">
+        <!--  -->
+      <!-- START PREFECTURE CONTENT -->
+    <section class="container flux">
+       <!-- PREFECTURE FLAG + MAP -->
+      <article id="mie" class="container  d-block align-items-start pt-5">
+        <img src="../assets/img/flag/flagmie.png" class="flag img-fluid" alt="dpaeau préfecture de Mie">
+        <img src="../assets/img/Kansai/prefMie.png" class="img-pref img-fluid" alt="Prefecture de Mie">
         <h3 class="pt-4 fs-2"> La préfecture de Mie</h3>
         <p class="lh-base pb-4 fs-4"> </p>
       </article>
 
       <div class="separator bg-danger pt-2"></div>
-
-      <article id="shiga" class="container flux pt-5">
-        <img src="assets/img/flag/flagshiga.png" class="flag img-fluid" alt="drapeau préfecture de Hyogo">
+        <!-- PREFECTURE FLAG + MAP -->
+      <article id="shiga" class="container  d-block align-items-start pt-5">
+        <img src="../assets/img/flag/flagshiga.png" class="flag img-fluid" alt="drapeau préfecture de Shiga">
+        <img src="../assets/img/Kansai/prefShiga.png" class="img-pref img-fluid" alt="Prefecture de Shiga" >
         <h3 class="pt-4 fs-2"> La préfecture de Shiga</h3>
         <p class="lh-base pb-4 fs-4"> </p>
       </article>
 
       <div class="separator bg-danger pt-2"></div>
-
-      <article id="kyoto" class="container d-block align-items-start flux pt-5">
-        <div class="">
-            <img src="assets/img/flag/flagkyoto.png" class=" flag img-fluid" alt="drapeau préfecture de Hyogo">
-            <img src="./assets/img/Kansai/prefKyoto.png" class="img-pref img-fluid">
-        </div>
+        <!-- PREFECTURE FLAG + MAP -->
+      <article id="kyoto" class="container d-block align-items-start pt-5">
+            <img src="../assets/img/flag/flagkyoto.png" class=" flag img-fluid" alt="drapeau préfecture de Kyoto">
+            <img src="../assets/img/Kansai/prefKyoto.png" class="img-pref img-fluid" alt="Prefecture de Kyoto">
         <h3 class="pt-4 fs-2"> La préfecture de Kyoto</h3>
         <p class="lh-base pb-4 fs-4">La préfecture de Kyoto est située dans la région du Kansai, et est réputée pour son riche patrimoine culturel et historique. La ville de Kyoto, ancienne capitale impériale pendant plus de mille ans, abrite de nombreux temples, sanctuaires, jardins et palais, dont le célèbre <strong>Kinkaku-ji</strong>(Pavillon d'Or) et le <strong>Fushimi Inari-taisha</strong>.</p>    
       </article>
 
       <div class="separator bg-danger pt-2"></div>
-
-      <article id="osaka" class="container flux pt-5">
-        <img src="assets/img/flag/flagosaka.png" class="flag img-fluid" alt="drapeau préfecture de Hyogo">
+        <!-- PREFECTURE FLAG + MAP -->
+      <article id="osaka" class="container d-block align-items-start pt-5">
+          <img src="../assets/img/flag/flagosaka.png" class="flag img-fluid" alt="drapeau préfecture d'Osaka">
+          <img src="../assets/img/Kansai/prefOsaka.png" class="img-pref img-fluid" alt="Prefecture d'Osaka">
         <h3 class="pt-4 fs-2"> La préfecture d'Osaka</h3>
         <p class="lh-base pb-4 fs-4"> </p>
       </article>
 
       <div class="separator bg-danger pt-2"></div>
-
-      <article id="hyogo" class="container flux pt-5">
-          <img src="assets/img/flag/flaghyogo.png" class="flag img-fluid" alt="drapeau préfecture de Hyogo">
+        <!-- PREFECTURE FLAG + MAP -->
+      <article id="hyogo" class="container d-block align-items-start pt-5">
+          <img src="../assets/img/flag/flaghyogo.png" class="flag img-fluid" alt="drapeau préfecture de Hyogo">
+          <img src="../assets/img/Kansai/prefHyogo.png" class="img-pref img-fluid" alt="Prefecture de Hyogo">
           <h3 class="pt-4 fs-2"> La préfecture de Hyogo</h3>
           <p class="lh-base pb-4 fs-4">La préfecture de Hyogo est située dans la région du Kansai. Elle est célèbre pour sa capitale <strong>Kobe</strong>, un port important et une ville cosmopolite, connue pour son bétail de haute qualité (bœuf de Kobe). Hyogo offre une diversité de paysages, allant des montagnes à la mer, avec des sites naturels tels que le mont Rokko et des sources thermales comme celles de Arima Onsen. La préfecture est également riche en histoire, abritant des temples, des châteaux comme le <strong>château de Himeji</strong>(classé au patrimoine mondial de l'UNESCO), et une cuisine variée. </p>
       </article>
       
       <div class="separator bg-danger pt-2"></div>
-
-      <article id="nara" class="container flux pt-5">
-        <img src="assets/img/flag/flagnara.png" class="flag border border-dark img-fluid" alt="drapeau préfecture de Hyogo">
+        <!-- PREFECTURE FLAG + MAP -->
+      <article id="nara" class="container  d-block align-items-start pt-5">
+        <img src="../assets/img/flag/flagnara.png" class="flag border border-dark img-fluid" alt="drapeau préfecture de Nara">
+        <img src="../assets/img/Kansai/prefNara.png" class="img-pref img-fluid" alt="Prefecture de Nara">
         <h3 class="pt-4 fs-2"> La préfecture de Nara</h3>
         <p class="lh-base pb-4 fs-4"> </p>
       </article>
 
       <div class="separator bg-danger pt-2"></div>
-
-      <article id="wakayama" class="container flux pt-5">
-        <img src="assets/img/flag/flagwakayama.png" class="flag border border-dark img-fluid" alt="drapeau préfecture de Hyogo">
+        <!-- PREFECTURE FLAG + MAP -->
+      <article id="wakayama" class="container  d-block align-items-start pt-5">
+        <img src="../assets/img/flag/flagwakayama.png" class="flag border border-dark img-fluid" alt="drapeau préfecture de Wakayama">
+        <img src="../assets/img/Kansai/prefWakayama.png" class="img-pref img-fluid" alt="Prefecture de Wakayama">
         <h3 class="pt-4 fs-2"> La préfecture de Wakayama</h3>
         <p class="lh-base pb-4 fs-4"> </p>
       </article>
-
+    </section>
+      <!-- END PREFECTURE CONTENT -->
       <div class="separator bg-danger pt-2 mb-5"></div>
-
+      <!-- START PLACE TO VISIT CARD CONTENT -->
       <section id="visite" class="container flux pb-4 pt-5">
         <div class="d-block justify-content-center">
           <i class="fa-solid fa-train text-primary  d-flex fs-1 mb-2 justify-content-center"></i>
           <h2 class="text-center mb-3">Lieux à visiter</h2>
         </div>
             <div class="row">
+              <!-- FIRST CARD -->
               <div class="col-lg-4 col-md-6 mb-3">
                 <div class="card card-visit h-100">
-                  <img src="assets/img/Kansai/kansai4.jpg" alt="" class="card-img-top">
+                  <img src="../assets/img/Kansai/kansai4.jpg" alt="" class="card-img-top">
                   <div class="card-body text-white bg-primary bg-gradient d-flex flex-column">
                     <h3 class="fs-3">Château de Himeji<br>(姫路城, Himeji-jō)</h3>
                     <p class="card-text fs-5">Également connu sous le nom de Château du Héron blanc en raison de la couleur blanche de ses murs. Il a été désigné trésor national en 1951 et inscrit sur la liste du patrimoine mondial de l'UNESCO en 1995.</p>
@@ -167,9 +184,10 @@
                   </div>
                 </div>
               </div>
+              <!-- 2ND CARD -->
               <div class="col-lg-4 col-md-6 mb-3">
                 <div class="card card-visit h-100">
-                  <img src="assets/img/Kansai/hikone.jpg" alt="" class="card-img-top">
+                  <img src="../assets/img/Kansai/hikone.jpg" alt="" class="card-img-top">
                   <div class="card-body text-white bg-primary bg-gradient d-flex flex-column">
                     <h3 class="fs-3">Château de Hikone<br>(彦根城, Hikone-jō)</h3>
                     <p class="card-text fs-5">L'un des rares châteaux japonais à avoir conservé son donjon original, ce qui en fait un site emblématique du Japon féodal. Il est inscrit comme trésor national depuis 1952. </p>
@@ -180,9 +198,10 @@
                   </div>
                 </div>
               </div>
+              <!-- 3RD CARD -->
               <div class="col-lg-4 col-md-6 mb-3">
                 <div class="card card-visit h-100">
-                  <img src="assets/img/Kansai/osaka.jpg" alt="" class="card-img-top">
+                  <img src="../assets/img/Kansai/osaka.jpg" alt="" class="card-img-top">
                   <div class="card-body text-white bg-primary bg-gradient d-flex flex-column">
                     <h3 class=" fs-3">Château d'Osaka<br>(大阪城, Osaka-jō)</h3>
                     <p class="card-text fs-5"> Symbole emblématique de la ville d'Osaka, construit à la fin du XVIe siècle par le seigneur Toyotomi Hideyoshi, il a joué un rôle clé dans l'unification du Japon.</p>
@@ -195,14 +214,14 @@
               </div>
             </div>
         </section>
-
+          <!-- END PLACE TO VISIT CONTENT -->
         <div class="separator bg-danger pt-2 mb-5"></div>
-      
+        <!-- START GALLERY -->
       <div class="d-block justify-content-center pt-5 pb-2">
         <i class="fa-solid fa-camera-retro text-primary fs-1 d-flex justify-content-center"></i>
         <h2 class="text-center">Galerie photos</h2>
       </div>
-
+        <!-- CAROUSEL -->
       <section id="galerie" class=" container-fluid bg-secondary pb-5 pt-5">
         <div class="row justify-content-center">
           <div id="carouselExampleCaptions" class=" carousel slide">
@@ -214,28 +233,28 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="assets/img//Kansai/carouselKansai/himeji.jpg" class="img-fluid d-block w-100" alt="...">
+                <img src="../assets/img//Kansai/carouselKansai/himeji.jpg" class="img-fluid d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Château de Himeji</h5>
                   <p>Himeji - Préfecture de Hyogo.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="assets/img//Kansai/carouselKansai/wakayama.jpg" class="img-fluid d-block w-100" alt="...">
+                <img src="../assets/img//Kansai/carouselKansai/wakayama.jpg" class="img-fluid d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block ">
                   <h5>Château de Wakayama</h5>
                   <p>Wakayama - Préfecture de Wakayama.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="assets/img/Kansai/carouselKansai/osaka.jpg" class="img-fluid d-block w-100" alt="...">
+                <img src="../assets/img/Kansai/carouselKansai/osaka.jpg" class="img-fluid d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Quartier de Namba</h5>
                   <p>Osaka - Préfecture d'Osaaka.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="assets/img/Kansai/carouselKansai/kyoto.jpg" class="img-fluid d-block w-100" alt="...">
+                <img src="../assets/img/Kansai/carouselKansai/kyoto.jpg" class="img-fluid d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Temple To-ji</h5>
                   <p>Kyoto - Préfecture de Kyoto.</p>
@@ -252,8 +271,10 @@
           </div>
         </div>
     </section>
-    
+    <!-- END GALERY -->
 </main> 
+<!-- END MAIN -->
+ <!-- START FOOTER -->
 <footer class="pt-5">
     <div class="container-fluid bg-primary">
         <footer class="py-3">
@@ -268,8 +289,8 @@
         </footer>
       </div>
 </footer>
-
-
+<!-- END FOOTER -->
+ <!-- SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
