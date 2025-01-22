@@ -12,9 +12,9 @@
   <!-- START HEADER -->
   <header>
     <!-- FIRST NAV - LOGO + UL -->
-    <nav class="navbar navbar-expand-lg bg-primary border-bottom">
+    <nav class="navbar navbar-expand-lg bg-primary fs-5 border-bottom">
       <div class="container-fluid d-flex align-items-center justify-content-between">
-        <a class="logo navbar-brand text-light" href="#">Découverte du Japon</a>
+        <a class="logo navbar-brand text-light fs-4" href="#">Découverte du Japon</a>
         <button class="navbar-toggler border-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,7 +34,7 @@
               <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Régions
               </a>
-              <ul class="dropdown-menu border-light bg-primary">
+              <ul class="dropdown-menu border-light fs-5 bg-primary">
                 <li><a class="dropdown-item bg-primary text-light" href="./pages/regions.html">Toutes les régions</a></li>
                 <li><a class="dropdown-item text-light" href="#">Hokkaido</a></li>
                 <li><a class="dropdown-item text-light" href="#">Tohoku</a></li>
@@ -58,9 +58,11 @@
       </div>
     </nav>
     <!-- 2ND NAV -->
-    <nav class="bg-primary text-white d-flex justify-content-center p-2">
+    <nav class="bg-primary text-white d-flex justify-content-between align-items-center ps-2 pe-2">
       <!-- SCRIPT JAPAN TIME - SCRIPT.JS -->
-      <div class="date fs-5" id="time"> </div>
+      <div class="fs-5" id="time"> </div>
+      <!-- SCRIPT WEATHER - SCRIPT.JS -->
+      <div class="fs-5" id="meteo"></div>
     </nav>
   </header>
   <!-- END HEADER -->
