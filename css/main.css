@@ -8955,6 +8955,18 @@ a {
   background-position: top;
 }
 
+.hero_reserv {
+  width: 100%;
+  height: 36rem;
+  padding: 2rem;
+  background-image: url("../assets/img/reserv.jpg");
+  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.2));
+  background-position: bottom;
+  text-shadow: 2px 2px 8px black;
+  background-position: center;
+}
+
 .butn {
   padding: 0.4rem 0.6rem;
   border-radius: 10px;
