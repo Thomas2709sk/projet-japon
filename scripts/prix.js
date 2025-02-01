@@ -2,6 +2,8 @@
 const selectPeople = document.getElementById('number');
 const pricePeople = document.getElementById('price');
 
+// Pour envoyer le prix dans FormData - formvalidate.js
+const hiddenPriceInput = document.getElementById('hiddenPrice');
 
 // Fonction pour ajuster le prix
 function updatePrice() {
@@ -17,6 +19,11 @@ function updatePrice() {
 
     // Texte du prix
     pricePeople.textContent = priceTotal + "€";
+
+     // Mise à jour du prix dans le champ caché
+    if (hiddenPriceInput) {
+        hiddenPriceInput.value = priceTotal;  // Mise à jour de la valeur du champ caché
+    }
 }
 
 // modifie le perix quand nombre personne change 
