@@ -38,5 +38,6 @@ export default class FormGenerate {
             chaine += `${ligne [0]} : ${ligne [1]}\n`
         }
         alert(chaine);
+        //  document.getElementById('resumereserv').textContent = chaine;
     }
 }

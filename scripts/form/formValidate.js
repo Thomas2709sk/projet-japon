@@ -10,6 +10,7 @@ const formReservation = new FormGenerate('form_reservation');
 formReservation.form.addEventListener('submit', (event) => {
     // empeche l'envoi
     event.preventDefault(); 
+    
     const hiddenPriceInput = document.getElementById('hiddenPrice');
     const priceText = document.getElementById('price'); 
     // Mets à jour la valeur du hidden
@@ -23,7 +24,7 @@ formReservation.form.addEventListener('submit', (event) => {
 
 
 
-// Créer une instance de FormHandler pour le formulaire de contact
+// Créer une instance de FormHandler pour le formulaire de review
 const formReview = new FormGenerate('form_review');
 
 

@@ -21,3 +21,8 @@
     @include mixins.bigtitle($url: '../assets/img/reserv.jpg');
     background-position: center;
 }
+
+.hero_map{
+    @include mixins.bigtitle($url: '../assets/img/map.jpg');
+    background-position: center;
+}
