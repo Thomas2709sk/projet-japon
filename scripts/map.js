@@ -24,11 +24,11 @@ var wakayama = L.marker([34.2260, 135.1675]).addTo(citiesGroup);
 wakayama.bindPopup("<b>Wakayama</b><br>Capitale de la préfecture de Wakayama.");
 
 // Castles
-var himejiMarker = L.marker([34.8394, 134.6939]).addTo(castlesGroup);
-himejiMarker.bindPopup("<b>Château de Himeji</b><br>Patrimoine mondial de l'UNESCO.");
+var himejiCastle = L.marker([34.8394, 134.6939]).addTo(castlesGroup);
+himejiCastle.bindPopup("<b>Château de Himeji</b><br>Patrimoine mondial de l'UNESCO.");
 
-var hikoneMarker = L.marker([35.2802, 136.2541]).addTo(castlesGroup);
-hikoneMarker.bindPopup("<b>Château de Hikone</b><br>Un des châteaux les mieux conservés du Japon.");
+var hikoneCastle = L.marker([35.2802, 136.2541]).addTo(castlesGroup);
+hikoneCastle.bindPopup("<b>Château de Hikone</b><br>Un des châteaux les mieux conservés du Japon.");
 
 var osakaCastle = L.marker([34.6873, 135.5262]).addTo(castlesGroup);
 osakaCastle.bindPopup("<b>Château d'Osaka</b><br>Un symbole emblématique de la ville d'Osaka.");
