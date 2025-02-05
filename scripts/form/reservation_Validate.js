@@ -1,9 +1,8 @@
 
-import FormGenerate from './formmanager.js';
+import FormGenerate from './form_Manager.js';
 
-// // Creer form
 
-// Créer une instance de FormHandler pour le formulaire de réservation
+// Créer formulaire de réservation
 const formReservation = new FormGenerate('form_reservation');
 
 // Ajouter un écouteur d'événements pour gérer la soumission
@@ -24,12 +23,4 @@ formReservation.form.addEventListener('submit', (event) => {
 
 
 
-// Créer une instance de FormHandler pour le formulaire de review
-const formReview = new FormGenerate('form_review');
 
-
-formReview.form.addEventListener('submit', (event) => {
-    event.preventDefault(); 
-
-    formReview.affAnswers();
-});
