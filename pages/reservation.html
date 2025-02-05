@@ -75,6 +75,7 @@
                 <div class="p-0 col-sm-12 col-md-10 col-lg-6 border-dark border bg-primary bg-gradient rounded">
                     <img src="../assets/img/kanto2.jpg" class="img-fluid  border-bottom border-dark">
                     <h3 class="ms-3">Réservez un guide pour la journée</h3>
+                    <!-- SCRIPT reservation_Validate -->
                     <form id="form_reservation">
                         <div class="form-group ms-3">
                           <div>
@@ -100,6 +101,7 @@
                             </select>
                           </div>
                         </div>
+                        <!-- SCRIPT date_Reservation -->
                         <div class=" form-group ms-3">
                             <label for="date" class="mt-2">Choisir une date :</label>
                             <input type="date" class="form-control w-50 border-dark" id="date" name="date" min="" required>
@@ -142,6 +144,7 @@
         <section class="container d-block pb-4 mt-3 px-3 col-sm-12 col-md-10 col-lg-8 text-white">
           <div class="row">
               <div class="  border-dark border bg-primary bg-gradient rounded">
+                <!-- SCRIPT review_Validate -->
                   <form id="form_review">
                     <div class="mb-3 mt-3">
                       <label for="InputPrenom" class="form-label">Prénom</label>
@@ -151,7 +154,7 @@
                       <label for="avis">Commentaire :</label>
                       <textarea class="form-control w-75 border-dark" id="avis" name="commentaire" rows="6" placeholder="Laisssez votre avis ici..."></textarea>
                   </div>
-                  <!-- SCRIPT review.js -->
+                  <!-- SCRIPT rate.js -->
                     <div id="stars" class="d-flex mt-3 text-secondary justify-content-center stars">
                       <i class="fa-solid fa-star star fs-1"></i>
                       <i class="fa-solid fa-star star fs-1"></i>
@@ -213,6 +216,7 @@
     <script src="../scripts/form/date_Reservation.js"></script> 
     <script src="../scripts/prix.js"></script>
     <script src="../scripts/rate.js"></script>
+    <!-- Script / Form -->
     <script src="../scripts/form/reservation_Validate.js" type="module"></script>
     <script src="../scripts/form/review_Validate.js" type="module"></script>
 </body>
