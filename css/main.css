@@ -9024,6 +9024,14 @@ a {
   opacity: 1;
 }
 
+.nav-link.active {
+  background-color: #FAB12F;
+}
+
+.nav-link.active span {
+  color: #212529 !important;
+}
+
 .logo-hero {
   width: 8rem;
 }
