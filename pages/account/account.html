@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
     <title>Mon compte</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="navbar-nav">
                   <li class="nav-item">
-                      <a class="nav-link text-light" aria-current="page" href="../index.html">Accueil</a>
+                      <a class="nav-link text-light" aria-current="page" href="/index.html">Accueil</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link text-light" href="/pages/map.html">Carte</a>
@@ -50,7 +50,7 @@
                     <a class="nav-link text-light" href="/pages/reservation.html">Réservation</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link text-light" href="signin.html">Connexion</a>
+                      <a class="nav-link text-light" href="/pages/account/signin.html">Connexion</a>
                   </li>
                   </ul>
               </div>
@@ -74,10 +74,10 @@
                                 <a id="reservLink" class="nav-account nav-link pl-0" href="#"><i class="fa-solid fa-calendar fs-5"></i> <span class="d-none d-md-inline fs-5 text-light">Réservations</span></a>
                             </li>
                             <li class="nav-item">
-                                <a id="guideLink" class="nav-account nav-link pl-0" href="#"><i class="fa-solid fa-map fs-5"></i> <span class="d-none d-md-inline fs-5 text-light">Réservation (guide)</span></a>
+                                <a id="favorisLink" class="nav-account nav-link pl-0" href="#"><i class="fa fa-heart codeply fa-fw fs-5"></i> <span class="d-none d-md-inline fs-5 text-light">Favoris</span></a>
                             </li>
                             <li class="nav-item">
-                                <a id="favorisLink" class="nav-account nav-link pl-0" href="#"><i class="fa fa-heart codeply fa-fw fs-5"></i> <span class="d-none d-md-inline fs-5 text-light">Favoris</span></a>
+                                <a id="guideLink" class="nav-account nav-link pl-0" href="#"><i class="fa-solid fa-map fs-5"></i> <span class="d-none d-md-inline fs-5 text-light">Guide</span></a>
                             </li>
                             <li class="nav-item">
                                 <a id="reviewLink" class="nav-account nav-link pl-0" href="#"><i class="fa-solid fa-comment fs-5"></i> <span class="d-none d-md-inline fs-5 text-light">Avis</span></a>
@@ -170,6 +170,43 @@
                         </table>   
                     </div>
                 </div>
+                <!-- Favoris -->
+                <div id="favorisContent" class="tab-content" style="display: none;">
+                    <h2>Favoris</h2>
+                    <p class="border-bottom border-dark pb-3">Ici apparaîtront les pages que vous avez ajoutées à vos favoris.</p>
+                    <div id="favorites">
+                        <div class="container mt-4 w-lg-50 ">
+                            <div class="accordion" id="favoritesAccordion">
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button border border-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Tokyo Tower
+                                  </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#favoritesAccordion">
+                                  <div class="accordion-body bg-secondary border-dark">
+                                    <p>Tokyo Tower est une grande tour de communications, très populaire parmi les touristes. Elle offre une vue panoramique incroyable sur Tokyo.</p>
+                                    <button class="btn btn-danger btn-sm">Supprimer</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Mount Fuji
+                                  </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#favoritesAccordion">
+                                  <div class="accordion-body">
+                                    <p>Mount Fuji est le plus haut sommet du Japon. C'est un symbole iconique du pays, particulièrement apprécié des randonneurs et des photographes.</p>
+                                    <button class="btn btn-danger btn-sm">Supprimer</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>    
+                    </div>
+                </div>
                 <!-- Guide -->
                 <div id="guideContent" class="tab-content" style="display: none;">
                     <h2>Guide</h2>
@@ -246,12 +283,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Favoris -->
-                <div id="favorisContent" class="tab-content" style="display: none;">
-                    <h2>Favoris</h2>
-                    <p class="border-bottom border-dark pb-3">Ici apparaîtront les pages que vous avez ajoutées à vos favoris.</p>
-                    <div id="favorites"></div>
-                </div>
                 <!-- Review -->
                 <div id="reviewContent" class="tab-content " style="display: none;">
                     <h2>Avis</h2>
@@ -281,9 +312,29 @@
                     </div>
                 </div>
                 <!-- Admin -->
-                <div id="adminContent" class="tab-content border-bottom border-dark" style="display: none;">
+                <div id="adminContent" class="tab-content" style="display: none;">
                     <h2>Administrateur</h2>
-                    <p>Panneau d'administration pour gérer le contenu des utilisateurs.</p>
+                    <p class="border-bottom border-dark pb-3">Panneau d'administration pour gérer le contenu des utilisateurs.</p>
+                    <div class="container flux">
+                        <!-- Graph Credits -->
+                        <div class="chart-container pb-5">
+                            <h3>Nombre de visiteurs</h3>
+                            <canvas id="numberVisit" aria-label="graphique nombre de visiteurs" role="img" ></canvas>
+                            <div id="totalVisit" class="fs-4">Nombre de visiteurs : 0</div>
+                        </div>
+                        <!-- Graph Reservations -->
+                        <div class="chart-container pb-5">
+                            <h3>Nombre de réservations</h3>
+                            <canvas id="numberReserv" aria-label="Graphique nombre reservation" role="img"></canvas>    
+                            <div id="totalReserv" class="fs-4">Nombre de Réservations : 0</div>
+                        </div>
+                        <!-- Graph Credits -->
+                        <div class="chart-container">
+                            <h3>Crédits récuperés</h3>
+                            <canvas id="money" aria-label="graphique credits recu" role="img" ></canvas>
+                            <div id="totalCredits" class="fs-4">Crédits Total : 0</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -331,6 +382,9 @@
   </div>
    <!-- SCRIPT -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-      <script src="../scripts/account/account_Tab.js"></script>
+      <!-- Chart.js script -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+      <script src="/scripts/account/account_Tab.js"></script>
+      <script src="/scripts/account/admin/graph.js"></script>
 </body>
 </html>
