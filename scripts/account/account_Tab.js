@@ -46,3 +46,29 @@ document.addEventListener('DOMContentLoaded', () => {
         firstLink.classList.add('active');
     }
 });
+
+    // Faire apparaitre la section Guide 
+    const guideSub = document.getElementById("guideSub");
+    const guideLink = document.getElementById("guideLi");
+
+    // afficher/masquer la section "Guide"
+    function toggleGuideLink() {
+        if (guideSub.value === "Guide") {
+            guideLi.classList.remove("d-none");  
+        } else {
+            guideLi.classList.add("d-none");
+        }
+    }
+
+    
+    toggleGuideLink();
+
+    
+    guideSub.addEventListener("change", function () {
+        toggleGuideLink();
+    });
+
+
+
+
+
