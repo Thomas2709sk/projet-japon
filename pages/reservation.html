@@ -21,7 +21,7 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
               <li class="nav-item">
-                  <a class="nav-link active text-light" aria-current="page" href="../index.html">Accueil</a>
+                  <a class="nav-link text-light" aria-current="page" href="../index.html">Accueil</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link text-light" href="/pages/map.html">Carte</a>
@@ -49,10 +49,17 @@
               <li class="nav-item">
                 <a class="nav-link text-light" href="#">Réservation</a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link text-light" href="signin.html">Connexion</a>
-              </li>
               </ul>
+              <div class="ms-auto">
+                <button class="btn btn-primary align-items-center" type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-circle-user fs-2 text-center"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-lg-end border-light bg-primary fs-5" aria-labelledby="userMenu">
+                  <li><a class="dropdown-item text-light" href="/pages/account/signin.html">Connexion</a></li>
+                  <li><button class="dropdown-item text-light d-none" id="btn-signout">Déconnexion</li>
+                  <li><a class="dropdown-item text-light" href="/pages/account/account.html">Mon Compte</a></li>
+                </ul>
+              </div>
           </div>
           </div>
       </nav>
@@ -213,10 +220,9 @@
     </div>
     <!-- SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="../scripts/form/date_Reservation.js"></script> 
+    <script src="../scripts/form/date_ChoiceReservation.js"></script> 
     <script src="../scripts/prix.js"></script>
     <script src="../scripts/rate.js"></script>
-    <!-- Script / Form -->
     <script src="../scripts/form/reservation_Validate.js" type="module"></script>
     <script src="../scripts/form/review_Validate.js" type="module"></script>
 </body>

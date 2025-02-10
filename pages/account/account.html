@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Mon compte</title>
+</head>
+<body>
+    <!-- START HEADER -->
+    <header>
+        <!-- FIRST NAV - LOGO + UL -->
+          <nav class="navbar navbar-expand-lg bg-primary fs-5">
+              <div class="container-fluid">
+              <a class="navbar-brand text-light" href="#">Découverte du Japon</a>
+              <button class="navbar-toggler border border-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars text-light"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link text-light" aria-current="page" href="/index.html">Accueil</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-light" href="/pages/map.html">Carte</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-light" href="#">Histoire</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Régions
+                      </a>
+                      <ul class="dropdown-menu border-light bg-primary fs-5">
+                      <li><a class="dropdown-item text-light" href="/pages/regions.html">Toutes les régions</a></li>
+                      <li><a class="dropdown-item text-light" href="#">Hokkaido</a></li>
+                      <li><a class="dropdown-item text-light" href="#">Tohoku</a></li>
+                      <li><a class="dropdown-item text-light" href="#">Kanto</a></li>
+                      <li><a class="dropdown-item text-light" href="/pages/kansai.html">Kansai</a></li>
+                      <li><a class="dropdown-item text-light" href="#">Chubu</a></li>
+                      <li><a class="dropdown-item text-light" href="#">Chugoku</a></li>
+                      <li><a class="dropdown-item text-light" href="#">Shikoku</a></li>
+                      <li><a class="dropdown-item text-light" href="#">Kyushu</a></li>
+                      <li><a class="dropdown-item text-light" href="#">Okinawa</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="/pages/reservation.html">Réservation</a>
+                  </li>
+                  </ul>
+                  <div class="ms-auto">
+                    <button class="btn btn-primary align-items-center" type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-circle-user fs-2 text-center"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-lg-end border-light bg-primary fs-5" aria-labelledby="userMenu">
+                      <li><a class="dropdown-item text-light" href="/pages/account/signin.html">Connexion</a></li>
+                      <li><button class="dropdown-item text-light d-none" id="btn-signout">Déconnexion</li>
+                      <li><a class="dropdown-item text-light" href="/pages/account/account.html">Mon Compte</a></li>
+                    </ul>
+                  </div>
+              </div>
+              </div>
+          </nav>
+  </header>
+  <!-- END HEADER -->
+   <!-- START MAIN -->
+  <main>
+        <!-- Side bar -->
+    <section class="container-fluid">
+        <div class="row min-vh-100 flex-column flex-md-row">
+            <aside class="col-12 col-md-3 col-lg-2 p-0 bg-dark flex-shrink-1">
+                <nav class="navbar navbar-expand navbar-dark bg-dark bg-gradient flex-md-column flex-row align-items-start py-2">
+                    <div class="collapse navbar-collapse ">
+                        <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
+                            <li class="nav-item">
+                                <a id="accountLink" class="nav-account nav-link pl-0 text-nowrap" href="#"><i class="fa-solid fa-house fs-5"></i> <span class="fw-bold fs-5 text-light">compte</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="reservLink" class="nav-account nav-link pl-0" href="#"><i class="fa-solid fa-calendar fs-5"></i> <span class="d-none d-md-inline fs-5 text-light">Réservations</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="favorisLink" class="nav-account nav-link pl-0" href="#"><i class="fa fa-heart codeply fa-fw fs-5"></i> <span class="d-none d-md-inline fs-5 text-light">Favoris</span></a>
+                            </li>
+                            <li id="guideLi" class="nav-item d-none">
+                                <a id="guideLink" class="nav-account nav-link pl-0" href="#"><i class="fa-solid fa-map fs-5"></i> <span class="d-none d-md-inline fs-5 text-light">Guide</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="reviewLink" class="nav-account nav-link pl-0" href="#"><i class="fa-solid fa-comment fs-5"></i> <span class="d-none d-md-inline fs-5 text-light">Avis</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="adminLink" class="nav-account nav-link pl-0" href="#"><i class="fa-solid fa-chart-line fs-5"></i> <span class="d-none d-md-inline fs-5 text-light">Administrateur</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </aside>
+            <div class="col bg-faded py-3 flex-grow-1">
+                <!-- Account -->
+                <div id="accountContent" class="tab-content">
+                    <h2>Mon compte</h2>
+                    <p class="border-bottom border-dark pb-3">Les informations relatives à votre compte apparaîtront ici.</p>
+                    <div>
+                      <h3 class="ms-3">Vos informations</h3>
+                        <form id="form_account">
+                            <div class="mb-3 mt-3">
+                                <label for="InputPseudo" class="form-label">Pseudo</label>
+                                <input type="text" class="form-control border-dark" name="Psedudo" id="InputPseudo" aria-describedby="emailHelp" placeholder="Pseudo" maxlength="12">
+                              </div>
+                            <div class="mb-3 mt-3 pb-3 border-bottom border-dark">
+                              <label for="InputEmail" class="form-label">Email</label>
+                              <input type="email" class="form-control border-dark" name="mail" id="InputEmail" aria-describedby="emailHelp" placeholder="votremail@mail.fr">
+                            </div>
+                            <div class="mb-3 mt-3 pb-3 border-bottom border-dark">
+                              <h3 class="ms-3">Votre photo</h3>
+                                <label for="InputPhoto" class="form-label">Photos de profil</label>
+                                <input type="file" class="form-control bg-secondary" id="InputPhoto" aria-describedby="PhotosHelp">
+                            </div>
+                            <div class="mb-3 ">
+                              <h3 class="ms-3">Changement de mot de passe</h3>
+                              <label for="InputNewPassword" class="form-label">Nouveau mot de passe</label>
+                              <input type="password" class="form-control border-dark" name="Mot de passe" id="InputNewPassword" placeholder="" minlength="8" maxlength="32">
+                              <p>Votre mot de passe doit contenir au moins 8 caractères.</p>
+                            </div>
+                            <div class="mb-3 border-bottom border-dark">
+                                <label for="confirmInputNewPassword" class="form-label">Confirmez votre nouveau Mot de passe</label>
+                                <input type="password" class="form-control border-dark" name="Conformation MdP" id="confirmInputNewPassword" placeholder="" minlength="8" maxlength="32">
+                                <p>Ne partagez jamais votre mot de passe !</p>
+                              </div>
+                            <div class="text-center mb-2">
+                                <button type="submit" class="btn btn-primary mt-2">Enregistrer modifications</button>
+                                <button type="button" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#deleteModal">Supprimer compte</button>
+                            </div>
+                          </form>
+                          <div class="border-bottom border-dark pb-3 mt-3">
+                            <h3>Vos Crédits</h3>
+                            <span>Crédits: 0</span>
+                          </div>
+                          <div class="mt-3">
+                            <h3>Inscription guide</h3>
+                            <div class="mb-3 mt-3">
+                                <label for="guideSub">Vous êtes :</label>
+                                <select class="form-control border-dark" id="guideSub" name="Subscribe">
+                                    <option value="Voyageur">Voyageurs</option>
+                                    <option value="Guide">Guide</option>
+                                </select>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <!-- Reservations -->
+                <div id="reservContent" class="tab-content" style="display: none;">
+                    <h2>Réservations</h2>
+                    <p class=" border-bottom border-dark pb-3">Les détails de votre réservation apparaîtront ici.</p>
+                    <div id="yourReserv" class="table-responsive flux">
+                        <table class="table table-striped table-warning">
+                            <thead>
+                              <tr>
+                                <th scope="col">Jour</th>
+                                <th scope="col">Ville</th>
+                                <th scope="col">Nom du guide</th>
+                                <th scope="col">Nombre de personnes</th>
+                                <th scope="col">modifier</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>06/02/2025</td>
+                                <td>Kyoto</td>
+                                <td>Miho</td>
+                                <td>2</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <button class="btn btn-warning btn-sm me-2"">Modifier</button>
+                                        <button class="btn btn-danger btn-sm">Supprimer</button>
+                                    </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                        </table>   
+                    </div>
+                </div>
+                <!-- Favoris -->
+                <div id="favorisContent" class="tab-content" style="display: none;">
+                    <h2>Favoris</h2>
+                    <p class="border-bottom border-dark pb-3">Ici apparaîtront les pages que vous avez ajoutées à vos favoris.</p>
+                    <div id="favorites">
+                        <div class="container mt-4 w-lg-50 ">
+                            <div class="accordion" id="favoritesAccordion">
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button border border-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Tokyo Tower
+                                  </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#favoritesAccordion">
+                                  <div class="accordion-body bg-secondary border-dark">
+                                    <p>Tokyo Tower est une grande tour de communications, très populaire parmi les touristes. Elle offre une vue panoramique incroyable sur Tokyo.</p>
+                                    <button class="btn btn-danger btn-sm">Supprimer</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Mount Fuji
+                                  </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#favoritesAccordion">
+                                  <div class="accordion-body">
+                                    <p>Mount Fuji est le plus haut sommet du Japon. C'est un symbole iconique du pays, particulièrement apprécié des randonneurs et des photographes.</p>
+                                    <button class="btn btn-danger btn-sm">Supprimer</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>    
+                    </div>
+                </div>
+                <!-- Guide -->
+                <div id="guideContent" class="tab-content" style="display: none;">
+                    <h2>Guide</h2>
+                    <p class="border-bottom border-dark pb-3">Les informations relatives aux réservations de guides apparaîtront ici.</p>
+                    <div class="border-bottom border-dark pb-3">
+                        <h3 class="ms-3">Vos informations</h3>
+                        <form id="form_guide">
+                            <div class="mb-3 mt-3">
+                                <label for="InputGuideName" class="">Prénom</label>
+                                <input type="text" class="form-control border-dark" name="Prénom" id="InputGuideName" aria-describedby="GuideNameHelp" placeholder="Prénom" maxlength="12">
+                              </div>
+                            <div class="mb-3 mt-3">
+                              <label for="InputGuideEmail" class="form-label">Email</label>
+                              <input type="email" class="form-control border-dark" name="GuideMail" id="InputGuideEmail" aria-describedby="emailHelp" placeholder="votremail@mail.fr">
+                            </div>
+                            <div class="mb-3 mt-3">
+                                <label for="InputLanguage">Langues parlées</label>  
+                                <input type="text" class="form-control border-dark" name="Langue" id="InputLanguage" aria-describedby="languageHelp" placeholder="Anglais, Japonais....">
+                            </div>
+                            <div class="mb-3 mt-3">
+                                <label for="guideSpecial">Votre specialité :</label>
+                                <select class="form-control border-dark" id="guideSpecial" name="specialité">
+                                    <option value="Histoire">Histoire</option>
+                                    <option value="Randonnée">Randonnée</option>
+                                    <option value="Culinaire">Culinaire</option>
+                                    <option value="Vie locale">Vie locale</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 mt-3">
+                                <label for="guideCity">Votre ville :</label>
+                                <select class="form-control border-dark" id="guideCity" name="Ville">
+                                    <option value="Kyoto">Kyoto</option>
+                                    <option value="Osaka">Osaka</option>
+                                    <option value="Himeji">Himeji</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="description">Description :</label>
+                                <textarea class="form-control border-dark" id="description" name="description" rows="6" placeholder="Présentez vous"></textarea>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button type="submit" class="btn btn-primary">Enregistrer vos modifications</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mt-3">
+                        <h3 class="ms-3">Vos réservations</h3>
+                        <div id="guideReserv" class="table-responsive flux">
+                            <table class="table table-striped table-warning">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Jour</th>
+                                    <th scope="col">Nom</th>
+                                    <th scope="col">Nombre de personnes</th>
+                                    <th scope="col">Etat réservation</th>
+                                    <th scope="col">Confirmation</th>
+                                  </tr>
+                                </thead>
+                                <tbody> 
+                                  <tr>
+                                    <td>06/02/2025</td>
+                                    <td>Thomas</td>
+                                    <td>2</td>
+                                    <td>A venir</td>
+                                    <td>
+                                        <div class="d-flex">
+                                            <button class="btn btn-success btn-sm me-2"">Départ</button>
+                                            <button class="btn btn-danger btn-md">Fin</button>
+                                        </div> 
+                                    </td>
+                                  </tr>
+                                </tbody>
+                            </table>   
+                        </div>
+                    </div>
+                </div>
+                <!-- Review -->
+                <div id="reviewContent" class="tab-content " style="display: none;">
+                    <h2>Avis</h2>
+                    <p class="border-bottom border-dark pb-3">Consultez et gérez vos avis ici.</p>
+                    <div id="confirmReviews" class=" col-lg-6">
+                         <!-- Liste des avis -->
+                        <div id="reviewsList">
+                            <div class="review p-3 mb-3 border rounded bg-primary text-white">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="mb-1">Thomas</h5>
+                                    <span class="">Publié le 06/02/2025</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <span class="text-warning">
+                                        <i class="fa-solid fa-star star fs-4"></i>
+                                    </span>
+                                    <span class="ms-2 fs-5">(5/5)</span>
+                                </div>
+                                <p class="mt-2">C'était une expérience incroyable ! Le guide était très professionnel et la visite était bien organisée.</p>
+                                <div class="text-end">
+                                    <button class="btn btn-success btn-sm">Valider</button>
+                                    <button class="btn btn-danger btn-sm">Rejeter</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Admin -->
+                <div id="adminContent" class="tab-content" style="display: none;">
+                    <h2>Administrateur</h2>
+                    <p class="border-bottom border-dark pb-3">Panneau d'administration pour gérer le contenu des utilisateurs.</p>
+                    <div class="container flux">
+                        <!-- Graph Credits -->
+                        <div class="chart-container pb-5">
+                            <h3>Nombre de visiteurs</h3>
+                            <canvas id="numberVisit" aria-label="graphique nombre de visiteurs" role="img" ></canvas>
+                            <div id="totalVisit" class="fs-4">Nombre de visiteurs : 0</div>
+                        </div>
+                        <!-- Graph Reservations -->
+                        <div class="chart-container pb-5">
+                            <h3>Nombre de réservations</h3>
+                            <canvas id="numberReserv" aria-label="Graphique nombre reservation" role="img"></canvas>    
+                            <div id="totalReserv" class="fs-4">Nombre de Réservations : 0</div>
+                        </div>
+                        <!-- Graph Credits -->
+                        <div class="chart-container">
+                            <h3>Crédits récuperés</h3>
+                            <canvas id="money" aria-label="graphique credits recu" role="img" ></canvas>
+                            <div id="totalCredits" class="fs-4">Crédits Total : 0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+  <!-- END MAIN -->
+ <!-- START FOOTER -->
+ <footer> 
+    <div class="container-fluid bg-primary">
+        <div class="py-3">
+          <ul class="nav justify-content-center border-bottom fs-5 align-items-center pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Accueil</a></li>
+            <li class="nav-item"><a href="/pages/contact.html" class="nav-link px-2 text-light">Contact</a></li>
+            <li class="nav-item"><a href="/pages/mentions-legales.html" class="nav-link px-2 text-light">Mentions légales</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light">FAQ</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light">A propos</a></li>
+            <li class="nav-item">
+              <a href="https://www.instagram.com/thomsao/" target="_blank" class="nav-link">
+                <svg width="40px" height="40px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint0_radial_87_7153)"></rect> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint1_radial_87_7153)"></rect> <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint2_radial_87_7153)"></rect> <path d="M23 10.5C23 11.3284 22.3284 12 21.5 12C20.6716 12 20 11.3284 20 10.5C20 9.67157 20.6716 9 21.5 9C22.3284 9 23 9.67157 23 10.5Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M16 21C18.7614 21 21 18.7614 21 16C21 13.2386 18.7614 11 16 11C13.2386 11 11 13.2386 11 16C11 18.7614 13.2386 21 16 21ZM16 19C17.6569 19 19 17.6569 19 16C19 14.3431 17.6569 13 16 13C14.3431 13 13 14.3431 13 16C13 17.6569 14.3431 19 16 19Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M6 15.6C6 12.2397 6 10.5595 6.65396 9.27606C7.2292 8.14708 8.14708 7.2292 9.27606 6.65396C10.5595 6 12.2397 6 15.6 6H16.4C19.7603 6 21.4405 6 22.7239 6.65396C23.8529 7.2292 24.7708 8.14708 25.346 9.27606C26 10.5595 26 12.2397 26 15.6V16.4C26 19.7603 26 21.4405 25.346 22.7239C24.7708 23.8529 23.8529 24.7708 22.7239 25.346C21.4405 26 19.7603 26 16.4 26H15.6C12.2397 26 10.5595 26 9.27606 25.346C8.14708 24.7708 7.2292 23.8529 6.65396 22.7239C6 21.4405 6 19.7603 6 16.4V15.6ZM15.6 8H16.4C18.1132 8 19.2777 8.00156 20.1779 8.0751C21.0548 8.14674 21.5032 8.27659 21.816 8.43597C22.5686 8.81947 23.1805 9.43139 23.564 10.184C23.7234 10.4968 23.8533 10.9452 23.9249 11.8221C23.9984 12.7223 24 13.8868 24 15.6V16.4C24 18.1132 23.9984 19.2777 23.9249 20.1779C23.8533 21.0548 23.7234 21.5032 23.564 21.816C23.1805 22.5686 22.5686 23.1805 21.816 23.564C21.5032 23.7234 21.0548 23.8533 20.1779 23.9249C19.2777 23.9984 18.1132 24 16.4 24H15.6C13.8868 24 12.7223 23.9984 11.8221 23.9249C10.9452 23.8533 10.4968 23.7234 10.184 23.564C9.43139 23.1805 8.81947 22.5686 8.43597 21.816C8.27659 21.5032 8.14674 21.0548 8.0751 20.1779C8.00156 19.2777 8 18.1132 8 16.4V15.6C8 13.8868 8.00156 12.7223 8.0751 11.8221C8.14674 10.9452 8.27659 10.4968 8.43597 10.184C8.81947 9.43139 9.43139 8.81947 10.184 8.43597C10.4968 8.27659 10.9452 8.14674 11.8221 8.0751C12.7223 8.00156 13.8868 8 15.6 8Z" fill="white"></path> <defs> <radialGradient id="paint0_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 23) rotate(-55.3758) scale(25.5196)"> <stop stop-color="#B13589"></stop> <stop offset="0.79309" stop-color="#C62F94"></stop> <stop offset="1" stop-color="#8A3AC8"></stop> </radialGradient> <radialGradient id="paint1_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(11 31) rotate(-65.1363) scale(22.5942)"> <stop stop-color="#E0E8B7"></stop> <stop offset="0.444662" stop-color="#FB8A2E"></stop> <stop offset="0.71474" stop-color="#E2425C"></stop> <stop offset="1" stop-color="#E2425C" stop-opacity="0"></stop> </radialGradient> <radialGradient id="paint2_radial_87_7153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.500002 3) rotate(-8.1301) scale(38.8909 8.31836)"> <stop offset="0.156701" stop-color="#406ADC"></stop> <stop offset="0.467799" stop-color="#6A45BE"></stop> <stop offset="1" stop-color="#6A45BE" stop-opacity="0"></stop> </radialGradient> </defs> </g></svg>
+              </a>
+            </li>
+          </ul>
+          <p class="text-center text-light">© 2025 Japaneeds You, Thomas N</p>
+        </div>
+      </div>
+  </footer>
+  <!-- END FOOTER -->
+   <!-- MODAL DELETE ACCOUNT-->
+   <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary bg-gradient">
+                <h1 class="modal-title text-white fs-5" id="deleteLabel">Attention !</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="deletetext" class="fw-bold fs-5">Êtes-vous sûr(e) de vouloir supprimer votre compte ?</p>
+            </div>
+            <div class="modal-footer d-flex justify-content-between bg-primary">
+                <button type="submit" class="btn btn-danger">Confirmer</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            </div>
+        </div>
+    </div>
+  </div>
+   <!-- SCRIPT -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <!-- Chart.js script -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+      <!-- script Account and Form -->
+      <script src="/scripts/account/account_Tab.js"></script>
+      <script src="/scripts/form/Account/form_AccountValidate.js" type="module"></script>
+      <script src="/scripts/form/Account/form_GuideValidate.js" type="module"></script>
+      <script src="/scripts/account/admin/graph.js"></script>
+</body>
+</html>

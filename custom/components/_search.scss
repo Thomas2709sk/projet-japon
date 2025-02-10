@@ -13,3 +13,13 @@
     opacity: 1;
 }
 
+
+// account
+
+.nav-link.active {
+    background-color: $warning;
+}
+
+.nav-link.active span {
+    color: $dark !important;
+}

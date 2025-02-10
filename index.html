@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav text-light">
             <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="index.html">Accueil</a>
+              <a class="nav-link text-light" aria-current="page" href="index.html">Accueil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="./pages/map.html">Carte</a>
@@ -59,17 +59,25 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="./pages/reservation.html">Réservation</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="./pages/signin.html">Connexion</a>
+              <a class="nav-link text-light" href="/pages/reservation.html">Réservation</a>
             </li>
           </ul>
+          <div class="ms-auto">
+            <button class="btn btn-primary align-items-center" type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-circle-user fs-2 text-center"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-lg-end border-light bg-primary fs-5" aria-labelledby="userMenu">
+              <li><a class="dropdown-item text-light" href="/pages/account/signin.html">Connexion</a></li>
+              <li><button class="dropdown-item text-light d-none" id="btn-signout">Déconnexion</li>
+              <li><a class="dropdown-item text-light" href="/pages/account/account.html">Mon Compte</a></li>
+            </ul>
+          </div>
+        </div>
         </div>
       </div>
     </nav>
     <!-- 2ND NAV -->
-    <nav class="bg-primary text-white d-flex justify-content-between align-items-center ps-2 pe-2">
+    <nav class="bg-primary text-white d-flex align-items-center justify-content-between ps-2 pe-2">
       <!-- SCRIPT JAPAN TIME - SCRIPT.JS -->
       <div class="fs-5" id="time"> </div>
       <!-- SCRIPT WEATHER - SCRIPT.JS -->
@@ -91,6 +99,7 @@
                 <div class="position-relative">
                   <label class="hero_label pt-2 fs-5 fst-italic text-white d-flex justify-content-center" for="my-city">Où souhaitez-vous aller ?</label>
                     <input type="text"
+                          id="my-city"
                           name="city"
                            class=" hero_input fs-5 rounded-pill search-bar pe-5"
                            placeholder="Région, préfecture, ville..."
