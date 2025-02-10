@@ -12,13 +12,13 @@ function updatePrice() {
     const numberPeople = parseInt(selectPeople.value, 10);
 
     // Prix pour 1 personne
-    const priceBase = 150;
+    const priceBase = 20;
 
     // Calcul pour plus de personnes
     const priceTotal = priceBase * numberPeople;
 
     // Texte du prix
-    pricePeople.textContent = priceTotal + "€";
+    pricePeople.textContent = priceTotal + " " + "Crédits";
 
      // Mise à jour du prix dans le champ caché
     if (hiddenPriceInput) {

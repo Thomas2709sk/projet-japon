@@ -83,22 +83,36 @@
                     <img src="../assets/img/kanto2.jpg" class="img-fluid  border-bottom border-dark">
                     <h3 class="ms-3">Réservez un guide pour la journée</h3>
                     <form id="form_reservation">
-                        <div class="form-group ms-3">
-                          <div>
-                            <label for="name_reserv">Nom :</label>
-                            <input type="text" class="form-control w-50 border-dark" name="nom" id="name_reserv" placeholder="Parker" required>
+                      <div class=" form-group ms-3">
+                        <!-- script date_ChoiceReservation -->
+                        <label for="date" class="">Choisir une date (obligatoire) :</label>
+                        <input type="date" class="mb-2 form-control w-50 border-dark" id="date" name="date" min="" required>
+                      </div>
+                        <div class="form-group ms-3 mt-2">
+                          <h3>Filtrer selon vos préférences</h3>
+                          <div class="mt-2">
+                            <label for="guideCity">Choisir une ville :</label>
+                            <select class="form-control w-50 border-dark" id="guideCity" name="Ville">
+                                <option value="" selected disabled>-- Choisir une ville --</option>
+                                <option value="Kyoto">Kyoto</option>
+                                <option value="Osaka">Osaka</option>
+                                <option value="Himeji">Himeji</option>
+                            </select>
                           </div>
-                          <div>
-                            <label for="firstname_reserv">Prenom :</label>
-                            <input type="text" class="form-control w-50 border-dark" name="prenom" id="firstname_reserv" placeholder="Peter" required>
-                          </div>
-                          <div>
-                            <label for="InputEmail_reserv" class="">Email</label>
-                            <input type="email" class="form-control w-50 border-dark" name="email" id="InputEmail_reserv" aria-describedby="emailHelp" placeholder="votremail@mail.fr" required>
+                          <div class="mt-2">
+                            <label for="guideSpecial">Specialité du guide :</label>
+                            <select class="form-control w-50 border-dark" id="guideSpecial" name="specialité">
+                              <option value="" selected disabled>-- Choisir une spécalité --</option>
+                                <option value="Histoire">Histoire</option>
+                                <option value="Randonnée">Randonnée</option>
+                                <option value="Culinaire">Culinaire</option>
+                                <option value="Vie locale">Vie locale</option>
+                            </select>
                           </div>
                           <div>
                             <label for="number" class="mt-2">Nombre de personnes :</label>
-                            <select class="form-control w-50 border-dark" id="number" name="nombre-personnes" required>
+                            <select class="form-control w-50 border-dark" id="number" name="nombre-personnes">
+                              <option value="" selected disabled>-- Nombre de personne --</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -106,10 +120,21 @@
                                 <option value="5">5</option>
                             </select>
                           </div>
-                        </div>
-                        <div class=" form-group ms-3">
-                            <label for="date" class="mt-2">Choisir une date :</label>
-                            <input type="date" class="form-control w-50 border-dark" id="date" name="date" min="" required>
+                          <div class="mt-2">Langues parlées :</div>
+                          <div class="d-flex flex-wrap">
+                            <div class="d-flex align-items-center text-light fs-5">
+                              <input type="checkbox" id="Français" class="form-check">
+                              <label for="Français" class="ms-2">Français</label>
+                            </div>
+                            <div class=" d-flex align-items-center ms-3 fs-5">
+                              <input type="checkbox" id="Anglais" class="form-check">
+                              <label for="Anglais" class="ms-2">Anglais</label>
+                            </div>
+                            <div class=" d-flex align-items-center ms-3 fs-5">
+                              <input type="checkbox" id="Japonais" class="form-check">
+                              <label for="Japonais" class="ms-2">Japonais</label>
+                            </div>
+                          </div>
                         </div>
                         <div class="form-group m-3">
                             <label for="commentaire">Commentaire :</label>
@@ -117,10 +142,11 @@
                         </div>
                         <!-- SCRIPT prix.js -->
                         <div class="mt-3 mx-auto col col-6 border border-dark rounded bg-secondary w-50">
-                          <p class="text-dark fw-bold text-center">Prix:<br> <span id="price" class="fs-4">150€</span></p>
+                          <p class="text-dark fw-bold text-center">Prix:<br> <span id="price" class="fs-4">0 Crédits</span></p>
                           <input type="hidden" name="prix" id="hiddenPrice" value="">
                         </div>
-                        <button type="submit" class="mt-3 mb-3 d-block mx-auto btn btn-outline-info">Envoyer</button>
+                        <!-- script show_TableGuide -->
+                        <button type="submit" id="btn-reserv" class="mt-3 mb-3 d-block mx-auto btn btn-outline-info">Envoyer</button>
                     </form>
                 </div>
                 <!-- RESERVATION RESUME -->
@@ -140,8 +166,56 @@
                 </div>
             </div>
         </section>
+        <!-- Available Guide -->
+        <section id="guideAvailable" class="container flux d-none">
+          <h2>Liste des guides disponible</h2>
+          <div id="tableGuideAvailable" class="table-responsive d-flex justify-content-center">
+            <table class="table table-striped table-warning">
+                <thead>
+                  <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Ville</th>
+                    <th scope="col">Nom du guide</th>
+                    <th scope="col">Nombre de places</th>
+                    <th scope="col">Détails du guide</th>
+                    <th scope="col">modifier</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>06/03/2025</td>
+                    <td>Kyoto</td>
+                    <td>Miho</td>
+                    <td>1</td>
+                    <td>
+                      <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#guideModal">Détails</button>
+                    </td>
+                    <td>
+                        <div class="d-flex">
+                            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#confirmationModal">Réserver</button>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>06/03/2025</td>
+                    <td>Himeji</td>
+                    <td>Oliver</td>
+                    <td>0</td>
+                    <td>
+                      <button class="btn btn-warning btn-sm">Détails</button>
+                    </td>
+                    <td>
+                        <div class="d-flex">
+                            <button class="btn btn-succes btn-sm" disabled>Réserver</button>
+                        </div>
+                    </td>
+                  </tr>
+                </tbody>
+            </table>   
+        </div>
+        </section>
 
-        <div class="separator bg-danger pt-2"></div>
+        <div class="separator bg-danger mt-5"></div>
         <div>
           <h2 class="text-center mt-5">Partagez votre expérience</h2>
         </div>
@@ -153,6 +227,18 @@
                     <div class="mb-3 mt-3">
                       <label for="InputPrenom" class="form-label">Prénom</label>
                       <input type="text" class="form-control w-50 border-dark" id="InputPrenom" aria-describedby="emailHelp" placeholder="Thomas" maxlength="12">
+                    </div>
+                    <div class=" form-group">
+                      <label for="date" class="">Choisir une date :</label>
+                      <input type="date" class="mb-2 form-control w-50 border-dark" id="dateReview" name="date" min="" required>
+                    </div>
+                    <div class="mt-2">
+                      <label for="guideName">Nom du guide :</label>
+                      <select class="form-control w-50 border-dark" id="guideName" name="Nom du guide">
+                        <option value="" selected disabled>-- Choisir votre guide --</option>
+                          <option value="Miho">Miho</option>
+                          <option value="Oliver">Oliver</option>
+                      </select>
                     </div>
                     <div class="form-group mt-3">
                       <label for="avis">Commentaire :</label>
@@ -206,7 +292,12 @@
                   <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                  <p id="resumereserv" class="fw-bold fs-5"></p>
+                  <div id="resumereserv" class=" fs-5">
+                    <span><b>Date :</b> 06/03/2025</span><br><br>
+                    <span><b>Ville :</b> Kyoto</span><br><br>
+                    <span><b>Nom du Guide :</b> Miho</span><br><br>
+                    <span><b>Nombre de personne :</b> 1</span>
+                  </div>
               </div>
               <div class="modal-footer d-flex justify-content-between bg-primary">
                   <button type="submit" class="btn btn-success">Confirmer</button>
@@ -215,12 +306,41 @@
           </div>
       </div>
     </div>
+
+    <!-- MODAL Guide -->
+    <div class="modal fade" id="guideModal" tabindex="-1" aria-labelledby="guideModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-primary bg-gradient">
+            <h1 class="modal-title text-white fs-5" id="modalGuideName">Miho</h1>
+            <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex flex-column flex-lg-row">
+            <img id="modalGuideImage" src="/assets/img/nom.jpg" alt="Image" class="col-lg-4 col-md-12 img-fluid">
+            <div id="modalGuideDescription" class=" mt-md-2 ms-lg-3 col-lg-8 col-md-12 fs-5">
+              <span><b>Langues parlées :</b> Japonais, Anglais</span><br><br>
+              <span><b>Spécialité :</b> Culinaire</span><br><br>
+              <span class="row justify-content-start"><b>Description :</b> <p class="ms-2">Bonjour, je m'appelle Miho, et je suis guide touristique au Japon depuis plusieurs années. Passionnée par la cuisine japonaise, l’histoire de mon pays et les échanges interculturels, je suis ravie de vous accompagner dans la découverte de ce pays fascinant.</p>
+              </span>
+              <span><b>Note :</b> 5 <i class="fa-solid fa-star star fs-4 text-warning"></i></span>
+            </div>
+          </div>
+          <div class="modal-footer bg-primary">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <!-- SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="../scripts/form/date_ChoiceReservation.js"></script> 
-    <script src="../scripts/prix.js"></script>
-    <script src="../scripts/rate.js"></script>
-    <script src="../scripts/form/Reservation/form_reservationValidate.js" type="module"></script>
-    <script src="../scripts/form/Reservation/form_review_Validate.js" type="module"></script>
+    <!-- script Reservation Form -->
+    <script src="/scripts/form/Reservation/date_ChoiceReservation.js"></script> 
+    <script src="/scripts/form/Reservation/prix.js"></script>
+    <script src="/scripts/form/Reservation/show_TableGuide.js"></script>
+    <script src="/scripts/form/Reservation/form_reservationValidate.js" type="module"></script>
+    <!-- script Review Form -->
+    <script src="/scripts/form/Reservation/rate.js"></script>
+    <script src="/scripts/form/Reservation/form_review_Validate.js" type="module"></script>
 </body>
 </html>
