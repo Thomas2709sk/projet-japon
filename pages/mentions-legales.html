@@ -49,10 +49,17 @@
                   <li class="nav-item">
                     <a class="nav-link text-light" href="/pages/reservation.html">Réservation</a>
                   </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-light" href="/pages/account/signin.html">Connexion</a>
-                  </li>
                   </ul>
+                  <div class="ms-auto">
+                    <button class="btn btn-primary align-items-center" type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-circle-user fs-2 text-center"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-lg-end border-light bg-primary fs-5" aria-labelledby="userMenu">
+                      <li><a class="dropdown-item text-light" href="/pages/account/signin.html">Connexion</a></li>
+                      <li><button class="dropdown-item text-light d-none" id="btn-signout">Déconnexion</li>
+                      <li><a class="dropdown-item text-light" href="/pages/account/account.html">Mon Compte</a></li>
+                    </ul>
+                  </div>
               </div>
               </div>
           </nav>

@@ -47,10 +47,17 @@
             <li class="nav-item">
               <a class="nav-link text-light" href="/pages/reservation.html">Réservation</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="signin.html">Connexion</a>
-            </li>
           </ul>
+          <div class="ms-auto">
+            <button class="btn btn-primary align-items-center" type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-circle-user fs-2 text-center"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-lg-end border-light bg-primary fs-5" aria-labelledby="userMenu">
+              <li><a class="dropdown-item text-light" href="/pages/account/signin.html">Connexion</a></li>
+              <li><button class="dropdown-item text-light d-none" id="btn-signout">Déconnexion</li>
+              <li><a class="dropdown-item text-light" href="/pages/account/account.html">Mon Compte</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -61,7 +68,7 @@
             
         </section>
           <section class="container flux">
-            <form>
+            <form id="form_signup">
                 <div class="mb-3 mt-3">
                     <label for="InputPseudo" class="form-label">Pseudo</label>
                     <input type="text" class="form-control border-dark" id="InputPseudo" aria-describedby="pseudoHelp" placeholder="Pseudo" minlength="2" required>
@@ -126,6 +133,9 @@
     </footer>
        <!-- SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="/scripts/account/verifForm/verifSignup.js"></script>
+    <!-- script Verif Input -->
+    <script src="/scripts/account/verif_Input/signup.js"></script>
+    <!-- script send Form -->
+    <script src="/scripts/form/Account/form_SignupValidate.js" type="module"></script>
   </body>
 </html>

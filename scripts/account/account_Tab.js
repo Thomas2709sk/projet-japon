@@ -10,7 +10,7 @@ function removeActiveClassFromAll() {
     });
 }
 
-// 1fficher ou cacher les sections en fonction du click
+// Afficher ou cacher les sections en fonction du click
 function showContent(contentId) {
     const contentElements = document.querySelectorAll('.tab-content');
     contentElements.forEach(content => {

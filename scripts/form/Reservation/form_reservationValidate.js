@@ -1,5 +1,5 @@
 
-import FormGenerate from './form_Manager.js';
+import FormGenerate from '../form_Manager.js';
 
 
 // Créer formulaire de réservation

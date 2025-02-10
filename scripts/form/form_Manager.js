@@ -12,12 +12,12 @@ export default class FormGenerate {
     getDiv(id) {
         return document.getElementById(id).parentMode;
     }
-    // recupere un element par ID
+    // recupere element par ID
     getElement (id) {
         return document.getElementById(id);
     }
 
-    // REcupere les elements des input
+    // Recupere les elements des input
     getAnswers() {
         this.formdata = new FormData(this.form);
         this.formdata.forEach(

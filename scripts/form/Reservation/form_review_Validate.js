@@ -1,4 +1,4 @@
-import FormGenerate from './form_Manager.js';
+import FormGenerate from '../form_Manager.js';
 
 // Créer formulaire de review
 const formReview = new FormGenerate('form_review');
