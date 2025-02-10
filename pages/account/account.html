@@ -100,7 +100,9 @@
                 <!-- Account -->
                 <div id="accountContent" class="tab-content">
                     <h2>Mon compte</h2>
+                    <p class="border-bottom border-dark pb-3">Les informations relatives à votre compte apparaîtront ici.</p>
                     <div>
+                      <h3 class="ms-3">Vos informations</h3>
                         <form id="form_account">
                             <div class="mb-3 mt-3">
                                 <label for="InputPseudo" class="form-label">Pseudo</label>
@@ -111,10 +113,12 @@
                               <input type="email" class="form-control border-dark" name="mail" id="InputEmail" aria-describedby="emailHelp" placeholder="votremail@mail.fr">
                             </div>
                             <div class="mb-3 mt-3 pb-3 border-bottom border-dark">
+                              <h3 class="ms-3">Votre photo</h3>
                                 <label for="InputPhoto" class="form-label">Photos de profil</label>
                                 <input type="file" class="form-control bg-secondary" id="InputPhoto" aria-describedby="PhotosHelp">
                             </div>
                             <div class="mb-3 ">
+                              <h3 class="ms-3">Changement de mot de passe</h3>
                               <label for="InputNewPassword" class="form-label">Nouveau mot de passe</label>
                               <input type="password" class="form-control border-dark" name="Mot de passe" id="InputNewPassword" placeholder="" minlength="8" maxlength="32">
                               <p>Votre mot de passe doit contenir au moins 8 caractères.</p>
