@@ -9096,6 +9096,16 @@ a {
   width: 10rem;
 }
 
+.card-guide:hover {
+  border-width: 2px;
+  border-color: #003049;
+}
+
+@media (max-width: 768px) {
+  .card-guide:hover {
+    border-width: 0;
+  }
+}
 .field {
   width: 20rem;
 }/*# sourceMappingURL=main.css.map */

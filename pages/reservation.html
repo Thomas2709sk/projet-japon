@@ -47,7 +47,7 @@
                   </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#">Réservation</a>
+                <a class="nav-link text-light" href="/pages/reservation.html">Réservation</a>
               </li>
               </ul>
               <div class="ms-auto">
@@ -65,7 +65,6 @@
       </nav>
 </header>
 <!-- END HEADER -->
-<body>
     <!-- START MAIN -->
     <main>
       <section class="hero_reserv text-center d-flex align-items-center justify-content-center container-fluid">
@@ -88,17 +87,17 @@
                         <label for="date" class="">Choisir une date (obligatoire) :</label>
                         <input type="date" class="mb-2 form-control w-50 border-dark" id="date" name="date" min="" required>
                       </div>
+                      <div class="mt-2 ms-3">
+                        <label for="guideCity">Choisir une ville :</label>
+                        <select class="form-control w-50 border-dark" id="guideCity" name="Ville">
+                            <option value="" selected disabled>-- Choisir une ville --</option>
+                            <option value="Kyoto">Kyoto</option>
+                            <option value="Osaka">Osaka</option>
+                            <option value="Himeji">Himeji</option>
+                        </select>
+                      </div>
                         <div class="form-group ms-3 mt-2">
                           <h3>Filtrer selon vos préférences</h3>
-                          <div class="mt-2">
-                            <label for="guideCity">Choisir une ville :</label>
-                            <select class="form-control w-50 border-dark" id="guideCity" name="Ville">
-                                <option value="" selected disabled>-- Choisir une ville --</option>
-                                <option value="Kyoto">Kyoto</option>
-                                <option value="Osaka">Osaka</option>
-                                <option value="Himeji">Himeji</option>
-                            </select>
-                          </div>
                           <div class="mt-2">
                             <label for="guideSpecial">Specialité du guide :</label>
                             <select class="form-control w-50 border-dark" id="guideSpecial" name="specialité">
@@ -113,6 +112,17 @@
                             <label for="number" class="mt-2">Nombre de personnes :</label>
                             <select class="form-control w-50 border-dark" id="number" name="nombre-personnes">
                               <option value="" selected disabled>-- Nombre de personne --</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label for="stars" class="mt-2">Note / 5 :</label>
+                            <select class="form-control w-50 border-dark" id="stars" name="Note">
+                              <option value="" selected disabled>-- Note --</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -136,6 +146,12 @@
                             </div>
                           </div>
                         </div>
+                        <div class="ms-3 mt-2 d-flex align-items-center">
+                          <label class="me-1" for="guidePrice">Prix :</label>
+                          <input type="range" id="guidePrice" name="prix" min="0" max="30" step="1" value="0" class="form-control-range me-2">
+                          <span id="priceValue" class="fs-5 me-2">0</span> Crédits
+                        </div>
+
                         <div class="form-group m-3">
                             <label for="commentaire">Commentaire :</label>
                             <textarea class="form-control w-75 border-dark" id="commentaire" name="commentaire" rows="4" placeholder="Indiquez ici toute demande particulière pour personnaliser votre expérience."></textarea>
@@ -165,56 +181,135 @@
                     <p class="text-dark fs-5">Pour toute demande de modification de votre réservation, veuillez passer par notre formulaire de contact. Nous reviendrons vers vous dans les plus brefs délais pour traiter votre demande.</p>
                 </div>
             </div>
-        </section>
+        </section>    
         <!-- Available Guide -->
-        <section id="guideAvailable" class="container flux d-none">
+        <section id="guideAvailable" class="container d-none">
           <h2>Liste des guides disponible</h2>
-          <div id="tableGuideAvailable" class="table-responsive d-flex justify-content-center">
-            <table class="table table-striped table-warning">
-                <thead>
-                  <tr>
-                    <th scope="col">Date</th>
-                    <th scope="col">Ville</th>
-                    <th scope="col">Nom du guide</th>
-                    <th scope="col">Nombre de places</th>
-                    <th scope="col">Détails du guide</th>
-                    <th scope="col">modifier</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>06/03/2025</td>
-                    <td>Kyoto</td>
-                    <td>Miho</td>
-                    <td>1</td>
-                    <td>
-                      <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#guideModal">Détails</button>
-                    </td>
-                    <td>
-                        <div class="d-flex">
-                            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#confirmationModal">Réserver</button>
-                        </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>06/03/2025</td>
-                    <td>Himeji</td>
-                    <td>Oliver</td>
-                    <td>0</td>
-                    <td>
-                      <button class="btn btn-warning btn-sm">Détails</button>
-                    </td>
-                    <td>
-                        <div class="d-flex">
-                            <button class="btn btn-succes btn-sm" disabled>Réserver</button>
-                        </div>
-                    </td>
-                  </tr>
-                </tbody>
-            </table>   
-        </div>
+          <p>Cliquez sur la réservation qui vous intéresse pour plus de détails.</p>
+          <!-- 1sr card -->
+          <div class="container mt-5 col-lg-6 col-md-6 col-sm-10">
+            <a href="/pages/Reservation/reservationDetails.html" target="_blank" class="card shadow-lg card-guide">
+              <div class="card-body">
+                <div class="row mb-2 border-bottom pb-2">
+                  <div class="col-lg-4">
+                    <strong>Date :</strong> 6 Mars 2025
+                  </div>
+                  <div class="col-lg-4">
+                    <strong>Départ :</strong> 9:00
+                  </div>
+                  <div class="col-lg-4">
+                    <strong>Fin :</strong> 17:00
+                  </div>
+                  <div class="col-lg-4">
+                    <strong>Ville :</strong> Kyoto
+                  </div>
+                  <div class="col-lg-4">
+                    <strong>Repas compris :</strong> Oui
+                  </div>
+                  <div class="col-lg-4">
+                    <strong>Nombre de places :</strong> 1
+                  </div>
+                </div>
+              </div>
+              <div class=" mb-2 d-flex align-items-center ">
+                <div class="ms-3">
+                  <img src="/assets/img/nom.jpg" alt="Photo du guide" class=" rounded-circle" width="50" height="50">
+                </div>
+                <div class="ms-1">
+                  <strong>Miho</strong> 
+                </div>
+                <div class="ms-2">
+                  <b>5 <i class="fa-solid fa-star text-warning"></i></b>
+                </div>
+                <div class="ms-3">
+                  <strong>Prix :</strong> 20 Crédits
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- 2ND Card -->
+          <div class="container mt-5 col-lg-6 col-md-6 col-sm-10">
+            <div class="card shadow-lg">
+              <div class="card-body">
+                <div class="row mb-2 border-bottom pb-2">
+                  <div class="col-lg-4">
+                    <strong>Date :</strong> 6 Mars 2025
+                  </div>
+                  <div class="col-lg-4">
+                    <strong>Départ :</strong> 10:00
+                  </div>
+                  <div class="col-lg-4">
+                    <strong>Fin :</strong> 18:00
+                  </div>
+                  <div class="col-lg-4">
+                    <strong>Ville :</strong> Kyoto
+                  </div>
+                  <div class="col-lg-4">
+                    <strong>Repas compris :</strong> Non
+                  </div>
+                  <div class="col-lg-4">
+                    <strong>Nombre de places :</strong> 0
+                  </div>
+                </div>
+              </div>
+              <div class=" mb-2 d-flex align-items-center ">
+                <div class="ms-3">
+                  <img src="/assets/img/okinawa2.jpg" alt="Photo du guide" class=" rounded-circle" width="50" height="50">
+                </div>
+                <div class="ms-1">
+                  <strong>Oliver</strong> 
+                </div>
+                <div class="ms-2">
+                  <b>4 <i class="fa-solid fa-star text-warning"></i></b>
+                </div>
+                <div class="ms-3">
+                  <strong>Prix :</strong> 15 Crédits
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3rd card -->
+          <div class="container mt-5 col-lg-6 col-md-6 col-sm-10">
+            <div class="card shadow-lg">
+              <div class="card-body">
+                <div class="row mb-2 border-bottom pb-2">
+                  <div class="col-lg-4">
+                    <strong>Date :</strong> 6 Mars 2025
+                  </div>
+                  <div class="col-lg-4">
+                    <strong>Départ :</strong> 10:00
+                  </div>
+                  <div class="col-lg-4">
+                    <strong>Fin :</strong> 18:00
+                  </div>
+                  <div class="col-lg-4">
+                    <strong>Ville :</strong> Kyoto
+                  </div>
+                  <div class="col-lg-4">
+                    <strong>Repas compris :</strong> Oui
+                  </div>
+                  <div class="col-lg-4">
+                    <strong>Nombre de places :</strong> 2
+                  </div>
+                </div>
+              </div>
+              <div class=" mb-2 d-flex align-items-center ">
+                <div class="ms-3">
+                  <img src="/assets/img/reserv.jpg" alt="Photo du guide" class=" rounded-circle" width="50" height="50">
+                </div>
+                <div class="ms-1">
+                  <strong>Julia</strong> 
+                </div>
+                <div class="ms-2">
+                  <b>3 <i class="fa-solid fa-star text-warning"></i></b>
+                </div>
+                <div class="ms-3">
+                  <strong>Prix :</strong> 30 Crédits
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
-
         <div class="separator bg-danger mt-5"></div>
         <div>
           <h2 class="text-center mt-5">Partagez votre expérience</h2>
@@ -335,7 +430,8 @@
     <!-- SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- script Reservation Form -->
-    <script src="/scripts/form/Reservation/date_ChoiceReservation.js"></script> 
+    <script src="/scripts/form/Reservation/date_ChoiceReservation.js"></script>
+    <script src="/scripts/Reservation/price_Range.js"></script> 
     <script src="/scripts/form/Reservation/prix.js"></script>
     <script src="/scripts/form/Reservation/show_TableGuide.js"></script>
     <script src="/scripts/form/Reservation/form_reservationValidate.js" type="module"></script>

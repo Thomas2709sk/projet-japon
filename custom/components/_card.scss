@@ -67,3 +67,20 @@
     width: 10rem;
     
 }
+
+// Carte Available guide
+
+.card-guide{
+    &:hover{
+        border-width: 2px;
+        border-color: $primary;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-guide{
+        &:hover{
+            border-width: 0;
+        }
+    }
+}
