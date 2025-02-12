@@ -145,13 +145,21 @@
                               <label for="Japonais" class="ms-2">Japonais</label>
                             </div>
                           </div>
-                        </div>
-                        <div class="ms-3 mt-2 d-flex align-items-center">
-                          <label class="me-1" for="guidePrice">Prix :</label>
-                          <input type="range" id="guidePrice" name="prix" min="0" max="30" step="1" value="0" class="form-control-range me-2">
-                          <span id="priceValue" class="fs-5 me-2">0</span> Crédits
-                        </div>
+                          <div class="mt-2">
+                            <label for="meal">Repas compris :</label>
 
+                            <input type="radio" id="meal-yes" class="ms-2" name="meal" value="yes">
+                            <label for="meal-yes">Oui</label>
+
+                            <input type="radio" id="meal-no" class="ms-3" name="meal" value="no">
+                            <label for="meal-no">Non</label>
+                          </div>
+                          <div class=" mt-2 d-flex align-items-center">
+                            <label class="me-1" for="guidePrice">Prix :</label>
+                            <input type="range" id="guidePrice" name="prix" min="0" max="30" step="1" value="0" class="form-control-range me-2">
+                            <span id="priceValue" class="fs-5 me-2">0</span> Crédits
+                          </div>
+                        </div>
                         <div class="form-group m-3">
                             <label for="commentaire">Commentaire :</label>
                             <textarea class="form-control w-75 border-dark" id="commentaire" name="commentaire" rows="4" placeholder="Indiquez ici toute demande particulière pour personnaliser votre expérience."></textarea>

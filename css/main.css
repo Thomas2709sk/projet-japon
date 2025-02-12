@@ -9010,6 +9010,23 @@ a {
   height: 1rem;
 }
 
+#show_review {
+  cursor: pointer;
+  color: blue;
+}
+
+#reviews_container {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.7s ease-in-out, max-height 0.6s ease-in-out;
+}
+
+#reviews_container.show {
+  opacity: 1;
+  max-height: 30rem;
+}
+
 .hero_input {
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.3333333333);

@@ -103,7 +103,7 @@
                         <span class="me-2"><strong>Prix :</strong></span> 20 Crédits
                       </div>
                       <div>
-                        <button type="button" class="btn btn-success">Réserver</button>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#confirmationModal">Réserver</button>
                       </div>
                     </div>
                   </div>
@@ -139,8 +139,8 @@
         </section>
         <section class="container mb-3 mt-3">
             <h2>Avis reçus</h2>
-            <p>Afficher les avis</p>
-            <div class="container mt-5 col-lg-6 col-md-6 col-sm-10">
+            <p id="show_review">Afficher les avis</p>
+            <div id="reviews_container" class="container mt-5 col-lg-6 col-md-6 col-sm-10">
                 <div class="card shadow-lg">
                   <div class="card-body">
                     <div class="row mb-2 border-bottom pb-2">
@@ -164,8 +164,7 @@
                         <p>C'était une expérience incroyable ! Le guide était très professionnel et la visite était bien organisée.</p>
                     </div>
                 </div>
-              </div>
-            </section>
+            </div>
         </section>
     </main>
     <!-- END MAIN -->
@@ -190,7 +189,29 @@
           </div>
       </footer>
     <!-- END FOOTER -->
+       <!-- MODAL RESERVATION FORM -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header bg-primary bg-gradient">
+                  <h1 class="modal-title text-white fs-5" id="ModalLabel">Confirmation de la réservation</h1>
+                  <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <div id="resumereserv" class=" fs-5">
+                    <span><b>Prix :</b> 20 Crédits</span><br><br>
+                    <span><b>Vos crédits :</b> 20</span><br><br>
+                  </div>
+              </div>
+              <div class="modal-footer d-flex justify-content-between bg-primary">
+                  <button type="submit" class="btn btn-success">Confirmer</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
+              </div>
+          </div>
+      </div>
+    </div>
     <!-- SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+    <script src="/scripts/Reservation/show_Review.js"></script>
+  </body>
 </html>

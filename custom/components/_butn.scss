@@ -33,3 +33,21 @@
     width: 1rem;
     height: 1rem;
 }
+
+// Show review
+#show_review{
+    cursor: pointer;
+    color: blue;
+}
+
+#reviews_container {
+    opacity: 0; 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: opacity 0.7s ease-in-out, max-height 0.6s ease-in-out; 
+}
+
+#reviews_container.show {
+    opacity: 1; 
+    max-height: 30rem; 
+}
