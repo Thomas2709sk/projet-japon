@@ -1,4 +1,4 @@
-// Afficher / Cacher avis reçcus
+// Afficher / Cacher avis reçus
 const showReview = document.getElementById('show_review');
 const reviewsContainer = document.getElementById('reviews_container');
 

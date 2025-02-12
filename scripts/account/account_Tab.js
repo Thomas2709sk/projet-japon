@@ -50,23 +50,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Faire apparaitre la section Guide 
     const guideSub = document.getElementById("guideSub");
     const guideLink = document.getElementById("guideLi");
+    const guidereservLink = document.getElementById("guidereservLi");
 
     // afficher/masquer la section "Guide"
     function toggleGuideLink() {
         if (guideSub.value === "Guide") {
             guideLi.classList.remove("d-none");  
+            guidereservLi.classList.remove("d-none");
         } else {
             guideLi.classList.add("d-none");
+            guidereservLi.classList.add("d-none");
         }
     }
-
-    
+ 
     toggleGuideLink();
-
-    
+   
     guideSub.addEventListener("change", function () {
         toggleGuideLink();
     });
+
+ 
 
 
 
