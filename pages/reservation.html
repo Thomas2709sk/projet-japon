@@ -194,7 +194,9 @@
         <section id="guideAvailable" class="container d-none">
           <h2>Liste des guides disponible</h2>
           <p>Cliquez sur la réservation qui vous intéresse pour plus de détails.</p>
-          <!-- 1sr card -->
+          <!-- script show_GuideReservation -->
+          <div id="reservations-container"></div>
+          <!-- 1st card -->
           <div class="container mt-5 col-lg-6 col-md-6 col-sm-10">
             <a href="/pages/Reservation/reservationDetails.html" target="_blank" class="card shadow-lg card-guide">
               <div class="card-body">
@@ -234,88 +236,6 @@
                 </div>
               </div>
             </a>
-          </div>
-          <!-- 2ND Card -->
-          <div class="container mt-5 col-lg-6 col-md-6 col-sm-10">
-            <div class="card shadow-lg">
-              <div class="card-body">
-                <div class="row mb-2 border-bottom pb-2">
-                  <div class="col-lg-4">
-                    <strong>Date :</strong> 6 Mars 2025
-                  </div>
-                  <div class="col-lg-4">
-                    <strong>Départ :</strong> 10:00
-                  </div>
-                  <div class="col-lg-4">
-                    <strong>Fin :</strong> 18:00
-                  </div>
-                  <div class="col-lg-4">
-                    <strong>Ville :</strong> Kyoto
-                  </div>
-                  <div class="col-lg-4">
-                    <strong>Repas compris :</strong> Non
-                  </div>
-                  <div class="col-lg-4">
-                    <strong>Nombre de places :</strong> 0
-                  </div>
-                </div>
-              </div>
-              <div class=" mb-2 d-flex align-items-center ">
-                <div class="ms-3">
-                  <img src="/assets/img/okinawa2.jpg" alt="Photo du guide" class=" rounded-circle" width="50" height="50">
-                </div>
-                <div class="ms-1">
-                  <strong>Oliver</strong> 
-                </div>
-                <div class="ms-2">
-                  <b>4 <i class="fa-solid fa-star text-warning"></i></b>
-                </div>
-                <div class="ms-3">
-                  <strong>Prix :</strong> 15 Crédits
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- 3rd card -->
-          <div class="container mt-5 col-lg-6 col-md-6 col-sm-10">
-            <div class="card shadow-lg">
-              <div class="card-body">
-                <div class="row mb-2 border-bottom pb-2">
-                  <div class="col-lg-4">
-                    <strong>Date :</strong> 6 Mars 2025
-                  </div>
-                  <div class="col-lg-4">
-                    <strong>Départ :</strong> 10:00
-                  </div>
-                  <div class="col-lg-4">
-                    <strong>Fin :</strong> 18:00
-                  </div>
-                  <div class="col-lg-4">
-                    <strong>Ville :</strong> Kyoto
-                  </div>
-                  <div class="col-lg-4">
-                    <strong>Repas compris :</strong> Oui
-                  </div>
-                  <div class="col-lg-4">
-                    <strong>Nombre de places :</strong> 2
-                  </div>
-                </div>
-              </div>
-              <div class=" mb-2 d-flex align-items-center ">
-                <div class="ms-3">
-                  <img src="/assets/img/reserv.jpg" alt="Photo du guide" class=" rounded-circle" width="50" height="50">
-                </div>
-                <div class="ms-1">
-                  <strong>Julia</strong> 
-                </div>
-                <div class="ms-2">
-                  <b>3 <i class="fa-solid fa-star text-warning"></i></b>
-                </div>
-                <div class="ms-3">
-                  <strong>Prix :</strong> 30 Crédits
-                </div>
-              </div>
-            </div>
           </div>
         </section>
         <div class="separator bg-danger mt-5"></div>
@@ -441,8 +361,10 @@
     <script src="/scripts/form/Reservation/date_ChoiceReservation.js"></script>
     <script src="/scripts/Reservation/price_Range.js"></script> 
     <script src="/scripts/form/Reservation/prix.js"></script>
-    <script src="/scripts/form/Reservation/show_TableGuide.js"></script>
     <script src="/scripts/form/Reservation/form_reservationValidate.js" type="module"></script>
+    <script src="/scripts/form/Reservation/show_TableGuide.js"></script>
+    <!-- script Show Guide -->
+    <script src="/scripts/Reservation/show_GuideReservation.js"></script>
     <!-- script Review Form -->
     <script src="/scripts/form/Reservation/rate.js"></script>
     <script src="/scripts/form/Reservation/form_review_Validate.js" type="module"></script>
